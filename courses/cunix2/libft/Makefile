@@ -11,7 +11,7 @@ all:		    clean $(OBJS)
 				@ar rcs $(LIB_NAME) src/*.o
 
 checkstyle:
-				@$(STYLE50) $(SRCS) #&>/dev/null && echo "LOOKS GOOD!!!"
+				style50 $(SRCS) #&>/dev/null && echo "LOOKS GOOD!!!"
 
 clean:
 				$(RM) $(OBJS) $(LIB_NAME)
